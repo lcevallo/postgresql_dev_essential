@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="packpub_dev_essential@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.1">
+    <root id="1"/>
+    <database id="2" parent="1" name="packpub_dev_essential">
+      <ObjectId>17855</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-06-05.16:36:29.387</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2239</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12081</ObjectId>
+    </schema>
+    <table id="9" parent="3" name="orders">
+      <ObjectId>17861</ObjectId>
+      <StateNumber>2238</StateNumber>
+    </table>
+    <table id="10" parent="3" name="suppliers">
+      <ObjectId>17856</ObjectId>
+      <StateNumber>2238</StateNumber>
+    </table>
+    <view id="11" parent="3" name="active_supplie_orders">
+      <ObjectId>17871</ObjectId>
+      <StateNumber>2239</StateNumber>
+    </view>
+    <column id="12" parent="9" name="order_number">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2238</StateNumber>
+    </column>
+    <column id="13" parent="9" name="supplier_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2238</StateNumber>
+    </column>
+    <column id="14" parent="9" name="quanity">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2238</StateNumber>
+    </column>
+    <column id="15" parent="9" name="is_active">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+      <StateNumber>2238</StateNumber>
+    </column>
+    <column id="16" parent="9" name="price">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2238</StateNumber>
+    </column>
+    <index id="17" parent="9" name="orders_pkey">
+      <ObjectId>17864</ObjectId>
+      <ColNames>order_number</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="18" parent="9" name="orders_pkey">
+      <ObjectId>17865</ObjectId>
+      <ColNames>order_number</ColNames>
+      <UnderlyingIndexName>orders_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="19" parent="9" name="orders_supplier_id_fkey">
+      <ObjectId>17866</ObjectId>
+      <ColNames>supplier_id</ColNames>
+      <RefTableName>suppliers</RefTableName>
+      <RefKeyName>suppliers_pkey</RefKeyName>
+      <RefColNames>supplier_id</RefColNames>
+    </foreign-key>
+    <column id="20" parent="10" name="supplier_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2237</StateNumber>
+    </column>
+    <column id="21" parent="10" name="supplier_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>2237</StateNumber>
+    </column>
+    <column id="22" parent="10" name="phone_number">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2237</StateNumber>
+    </column>
+    <index id="23" parent="10" name="suppliers_pkey">
+      <ObjectId>17859</ObjectId>
+      <ColNames>supplier_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="10" name="suppliers_pkey">
+      <ObjectId>17860</ObjectId>
+      <ColNames>supplier_id</ColNames>
+      <UnderlyingIndexName>suppliers_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="11" name="supplier_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2239</StateNumber>
+    </column>
+    <column id="26" parent="11" name="supplier_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>2239</StateNumber>
+    </column>
+    <column id="27" parent="11" name="quanity">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2239</StateNumber>
+    </column>
+    <column id="28" parent="11" name="price">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>2239</StateNumber>
+    </column>
+  </database-model>
+</dataSource>
